@@ -1,0 +1,15 @@
+*{
+    margin: 0%;
+    
+}
+.principal_img{
+    width: 100%;
+    
+}
+
+.inicio{
+    padding: 10px;
+    background-color:aquamarine;
+    border: solid white 0.5px;
+    border-radius: 10px;
+}

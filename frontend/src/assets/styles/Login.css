@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw ;
+}
+
+.Tela-login{
+    border-radius: 20px;
+    /* width: clamp(70%, 70%, 60%); */
+    box-shadow: 10px 15px 5px rgba(0, 0, 0, 2);
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: clamp(35px, 8%, 70px);
+}
+
+.img{
+    height: 100px;
+    width:100px;
+    margin-left:100px;
+    margin-bottom: 50px;
+}
+
+.btn-login{
+    background-color:gray;
+    margin-top: 30px;
+    margin-left: 40%;
+    border: solid white 0.5px;
+    border-radius: 10px;
+
+}
+
+
+p{
+    text-align: center;
+}
+
+.input{
+    width:300px;
+    
+}
+
+.criar-conta{
+    margin-top: 10px;
+    display: flex;
+}
+
+.voltar{
+    background-color: red;
+}

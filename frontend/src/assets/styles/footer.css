@@ -1,0 +1,11 @@
+.footer-site{
+    background-color: #363636;
+    color: white;
+    text-align: center;
+
+}
+
+.footer-site p{
+    margin: 0;
+    padding: 30px
+}
