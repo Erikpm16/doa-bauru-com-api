@@ -1,0 +1,38 @@
+[
+    {
+            "id": "1",
+            "name": "Sec. do Bem-Estar Social",
+            "image": "https://www.aguanil.mg.gov.br/fotos/91c486d96c439c66d82b9868853e4dd0.jpg"
+        },
+        {
+            "id": "2",
+            "name": "SORRI Bauru",
+            "image": "https://pbs.twimg.com/profile_images/1026535765919105025/phuYBjbQ_400x400.jpg"
+        },
+        {
+            "id": "3",
+            "name": "APAE Bauru",
+            "image": "https://loja.apaebauru.org.br/image/cache/catalog/LOJA_VIRTUAL/logoapae-600x315.png"
+        },
+        {
+            "id": "4",
+            "name": "Vila Vicentina",
+            "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=9qBM_QQ_qxcq-Dq7Rq1G_A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=347.59723&pitch=0&thumbfov=100"
+        },
+        {
+          "id": "5",
+          "name": "Lar dos Desamparados",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsRF995uUV2aHmy0o-iZW2Ruqja4abBVOv1jM8sAj94v2_KxjdbdZISIEyn4BaNTUE2I&usqp=CAU"
+        },
+        {
+            "id": "6",
+            "name": "Sociedade de Apoio à Pessoa com AIDS",
+            "image": "http://2.bp.blogspot.com/_Vc0cg38f9Mg/S-6hdzlSIiI/AAAAAAAAAfw/zCVi6lYMrcs/s1600/SAPAB.jpg"
+        },
+        {
+            "id": "7",
+            "name": "Fundo Social de Solidariedade",
+            "image": "http://www2.bauru.sp.gov.br/arquivos/sist_noticias/29243/img_29243_1.jpeg"
+        }  
+]        
+  

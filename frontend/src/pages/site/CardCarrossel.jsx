@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../../assets/styles/CardCarrosel.css'
 
 
@@ -8,7 +10,7 @@ import '../../assets/styles/CardCarrosel.css'
         const carrousel = useRef(null);
 
     useEffect(() => {
-        fetch('http://localhost:3000/static/ong.json')
+        fetch('http://localhost:3000/static/ongs.json')
             .then((response) => response.json())
             .then(setData);
     }, [])
@@ -33,13 +35,11 @@ import '../../assets/styles/CardCarrosel.css'
                 return (
                     <div className="item" key={id}>
                     <div className="image" >
-                        <img src={image} alt={name} style={{ maxWidth: "100%" }}/>
+                        <img src={image} alt={name} />
                     </div>
                     <div className="info">
                         <span className="name">{name}</span>
-                        <button>
-                        <span className="contato">contato</span>
-                        </button>
+                        <Button as={Link} to={`/instituicoes/${id}`}>Mais informações</Button>
                     </div>
                 </div>
                 );

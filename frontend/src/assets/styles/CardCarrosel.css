@@ -72,6 +72,13 @@
     cursor: pointer;
 }
 
+.contato {
+    border-radius: 15px 15px 15px 15px;
+    cursor: pointer;
+    
+}
+
+
 .container .buttons button:first-child img {
     transform: rotate(180deg);
 }

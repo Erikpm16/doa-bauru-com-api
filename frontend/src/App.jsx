@@ -6,6 +6,7 @@ import Instituicoes from './pages/site/Instituicoes';
 import Form from './pages/admin/Form';
 import HomePage from './pages/site/HomePage';
 import Map from './pages/site/Map';
+import CardDetalhes from './pages/site/CardDetalhes';
 
 export default function App() {
     return (
@@ -16,8 +17,7 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path='/mapa' element={<Map />}/>
             <Route path="/instituicoes" element={<Instituicoes />}/>
-           
-            
+           <Route path="/instituicoes/:id" element={<CardDetalhes/>}/>            
           </Route>        
           
           

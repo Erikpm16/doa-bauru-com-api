@@ -10,13 +10,12 @@ import CardCarrossel from './CardCarrossel';
 
 
 export default function Home() {
-   
+
 
     return (
         <div className="fundo" >
             <Container className="fundo-container">
-            <Carousel />
-                {/* <DestaqueCards ongs={ongs} /> */}
+                <Carousel />
                 <CardCarrossel />
                 <Accordion />
             </Container>
