@@ -1,38 +1,52 @@
 [
-    {
+        {
             "id": "1",
             "name": "Sec. do Bem-Estar Social",
-            "image": "https://www.aguanil.mg.gov.br/fotos/91c486d96c439c66d82b9868853e4dd0.jpg"
+            "image": "https://www.aguanil.mg.gov.br/fotos/91c486d96c439c66d82b9868853e4dd0.jpg",
+            "desc": "Secretaria Municipal do Bem-Estar Social - Banco de projetos beneficientes, Bolsa Família, Benefícios Sociais, Conselhos Tutelares dentre outros serviços da Prefeitura Municial de Bauru",
+            "site": "https://www2.bauru.sp.gov.br/sebes/"
         },
         {
             "id": "2",
             "name": "SORRI Bauru",
-            "image": "https://pbs.twimg.com/profile_images/1026535765919105025/phuYBjbQ_400x400.jpg"
+            "image": "https://pbs.twimg.com/profile_images/1026535765919105025/phuYBjbQ_400x400.jpg",
+            "desc": "A SORRI-BAURU, Centro Especializado em Reabilitação com mais 40 anos de existência, tem como missão promover os direitos humanos, com ênfase nos direitos da pessoa com deficiência. Proporciona maior autonomia e qualidade de vida às pessoas com deficiência física, intelectual, auditiva, múltipla e/ou com necessidades especiais por meio de atendimentos na área da saúde, educação e assistência social.",
+            "site": "https://sorribauru.com.br/"
         },
         {
             "id": "3",
             "name": "APAE Bauru",
-            "image": "https://loja.apaebauru.org.br/image/cache/catalog/LOJA_VIRTUAL/logoapae-600x315.png"
+            "image": "https://loja.apaebauru.org.br/image/cache/catalog/LOJA_VIRTUAL/logoapae-600x315.png",
+            "desc": "Associação de caráter beneficente de assistência social que presta atendimento e assessoramento a pessoa com deficiência, bem como a defesa de direitos articulada com políticas nas áreas de Assistência Social, Educação e Saúde. A APAE Bauru atende atualmente quatro mil pessoas com deficiência intelectual, física, visual, transtorno do espectro autista, necessidades educacionais especiais, bebês de risco e pessoas em situação de vulnerabilidade social.",
+            "site": "https://www.apaebauru.org.br/"
         },
         {
             "id": "4",
             "name": "Vila Vicentina",
-            "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=9qBM_QQ_qxcq-Dq7Rq1G_A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=347.59723&pitch=0&thumbfov=100"
+            "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=9qBM_QQ_qxcq-Dq7Rq1G_A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=347.59723&pitch=0&thumbfov=100",
+            "desc": " Vila Vicentina  atende hoje 49 idosos entre homens e mulheres, com moradia, alimentação, lazer, oficinas de artesanato entre outras atividades, e profissionais 24 horas que prestam todos os cuidados necessários para o bem-estar de casa idoso. Atende, também, 30 idosos entre homens e mulheres no Centro Dia, que vem passar o dia na instituição, e recebem alimentação, participam de oficinas de artesanato, passeios, com profissionais que prestam todos os cuidados necessários.",
+            "site": "https://vilavicentinabauru.com.br/"
         },
         {
           "id": "5",
           "name": "Lar dos Desamparados",
-          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsRF995uUV2aHmy0o-iZW2Ruqja4abBVOv1jM8sAj94v2_KxjdbdZISIEyn4BaNTUE2I&usqp=CAU"
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsRF995uUV2aHmy0o-iZW2Ruqja4abBVOv1jM8sAj94v2_KxjdbdZISIEyn4BaNTUE2I&usqp=CAU",
+          "desc": "Há mais de 70 anos que as pessoas que ficam só têm um lar. Batizado de “Lar dos Desamparados”, ele é hoje uma entidade conhecida e respeitada tanto entre os necessitados como no meio filantrópico. No ‘curriculo’ do lar, constam fábrica de farinha de mandioca, criação de porcos, bovinos e uma horta que tornou a entidade famosa em Bauru, apesar de pertencer a Agudos.",
+          "site": "https://m.facebook.com/profile.php?id=1462476490714087"
         },
         {
             "id": "6",
             "name": "Sociedade de Apoio à Pessoa com AIDS",
-            "image": "http://2.bp.blogspot.com/_Vc0cg38f9Mg/S-6hdzlSIiI/AAAAAAAAAfw/zCVi6lYMrcs/s1600/SAPAB.jpg"
+            "image": "http://2.bp.blogspot.com/_Vc0cg38f9Mg/S-6hdzlSIiI/AAAAAAAAAfw/zCVi6lYMrcs/s1600/SAPAB.jpg",
+            "desc": "O objetivo principal das Casas de Apoio é oferecer assistência multidisciplinar aos portadores do HIV e/ou doentes de aids sem recursos financeiros ou apoio familiar, promovendo a sua reintegração à família e à sociedade.",
+            "site": "https://bvsms.saude.gov.br/casas-de-apoio-para-pessoas-vivendo-com-hiv-aids/"
         },
         {
             "id": "7",
             "name": "Fundo Social de Solidariedade",
-            "image": "http://www2.bauru.sp.gov.br/arquivos/sist_noticias/29243/img_29243_1.jpeg"
+            "image": "http://www2.bauru.sp.gov.br/arquivos/sist_noticias/29243/img_29243_1.jpeg",
+            "desc": "Seu objetivo é auxiliar e desenvolver projetos sociais para melhorar a qualidade de vida dos segmentos mais carentes da população, atuando na realização de programas e ações que visam o resgate da autoestima e da dignidade humana por meio da qualificação profissional. Para tanto, são articuladas ações e parcerias com a iniciativa privada, órgãos do governo e com a sociedade civil. São políticas governamentais que contribuem para a redução das desigualdades sociais.",
+            "site": "https://www2.bauru.sp.gov.br/gabinete/fundosocialsolidariedade/"
         }  
 ]        
   

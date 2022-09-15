@@ -3,10 +3,10 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-import { Context } from "./context/AdminClientContext";
+// import { Context } from "./context/AdminClientContext";
 
 function GridComplexExample() {
-  const { create } = useContext(Context);
+  // const { create } = useContext(Context);
 
   const [email, setEmail] = useState();
   const [nome, setNome] = useState();
@@ -15,18 +15,20 @@ function GridComplexExample() {
   const [cidade, setCidade] = useState();
   const [estado, setEstado] = useState();
   const [cep, setCep] = useState();
+  const [bairro, setBairro] = useState();
+  const [complemento, setComplemento] = useState();
 
   const submit = (event) => {
     event.preventDefault();
-    create({
-      email,
-      nome,
-      password,
-      enredeco,
-      cidade,
-      estado,
-      cep,
-    });
+    // create({
+    //   email,
+    //   nome,
+    //   password,
+    //   enredeco,
+    //   cidade,
+    //   estado,
+    //   cep,
+    // });
   };
 
   return (
@@ -39,18 +41,9 @@ function GridComplexExample() {
             value={nome}
             onChange={(event) => setNome(event.target.value)}
           />
-          <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Enter email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </Form.Group>
         </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridEmail">
+        <Form.Group as={Col} controlId="formGridPassword">
           <Form.Label>Senha</Form.Label>
           <Form.Control
             type="password"
@@ -59,9 +52,20 @@ function GridComplexExample() {
             onChange={(event) => setPassword(event.target.value)}
           />
         </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
+          </Form.Group>
       </Row>
 
-      <Form.Group className="mb-3" controlId="formGridEndereco">
+      <Row className="mb-3">
+      <Form.Group as={Col} controlId="formGridEndereco">
         <Form.Label>Endereço</Form.Label>
         <Form.Control
           placeholder="Endereço"
@@ -69,6 +73,25 @@ function GridComplexExample() {
           onChange={(event) => setEnredeco(event.target.value)}
         />
       </Form.Group>
+
+      <Form.Group as={Col} controlId="formGridComplemento">
+        <Form.Label>Complemento</Form.Label>
+        <Form.Control
+          placeholder="Complemento"
+          value={complemento}
+          onChange={(event) => setComplemento(event.target.value)}
+        />
+      </Form.Group>
+
+      <Form.Group as={Col} controlId="formGridBairro">
+        <Form.Label>Bairro</Form.Label>
+        <Form.Control
+          placeholder="Bairro"
+          value={bairro}
+          onChange={(event) => setBairro(event.target.value)}
+        />
+      </Form.Group>
+      </Row>
 
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridCidade">
@@ -130,9 +153,10 @@ function GridComplexExample() {
         </Form.Group>
       </Row>
 
-      <Form.Group className="mb-3" id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
+      <div class="mb-3">
+  <label for="formFile" class="form-label">Imagem</label>
+  <input class="form-control" type="file" id="formFile" />
+</div>
 
       <Button variant="primary" type="submit">
         Submit

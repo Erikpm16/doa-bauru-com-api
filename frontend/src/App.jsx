@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/site/Home'
@@ -8,6 +9,9 @@ import HomePage from './pages/site/HomePage';
 import Map from './pages/site/Map';
 import CardDetalhes from './pages/site/CardDetalhes';
 
+
+
+
 export default function App() {
     return (
       <BrowserRouter>
@@ -17,11 +21,9 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path='/mapa' element={<Map />}/>
             <Route path="/instituicoes" element={<Instituicoes />}/>
-           <Route path="/instituicoes/:id" element={<CardDetalhes/>}/>            
-          </Route>        
-          
-          
-          <Route path="/form" element={<Form />}></Route>
+           <Route path="/instituicoes/:id" element={<CardDetalhes/>}/>  
+           <Route path="/form" element={<Form />} />          
+          </Route>                                
         </Routes>
       </BrowserRouter>
     );
