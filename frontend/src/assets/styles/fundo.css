@@ -1,8 +1,8 @@
 .fundo{
-    background-image: url("../img/fundo1.png");
+    background-image: url("../img/fundo1.jpg");
     background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  padding: 30px;;
+  
 }
 
