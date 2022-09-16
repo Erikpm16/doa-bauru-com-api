@@ -21,7 +21,7 @@ export default function Login() {
           <Button className="btn-login" variant="primary" type="submit">
             Entrar
           </Button>
-          <a href="/cadastro" className="criar-conta">
+          <a href="/form" className="criar-conta">
             Criar sua conta
           </a>
           <a href="/" className="criar-conta">
