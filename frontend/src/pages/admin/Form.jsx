@@ -17,6 +17,8 @@ function GridComplexExample() {
   const [cep, setCep] = useState();
   const [bairro, setBairro] = useState();
   const [complemento, setComplemento] = useState();
+  const [descricao, setDescricao] = useState();
+  const [site, setSite] = useState();
 
   const submit = (event) => {
     event.preventDefault();
@@ -28,6 +30,11 @@ function GridComplexExample() {
     //   cidade,
     //   estado,
     //   cep,
+    //   bairro,
+    //   complemento,
+    //   descricao,
+    //   site,
+    // imagem
     // });
   };
 
@@ -54,43 +61,43 @@ function GridComplexExample() {
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Enter email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </Form.Group>
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </Form.Group>
       </Row>
 
       <Row className="mb-3">
-      <Form.Group as={Col} controlId="formGridEndereco">
-        <Form.Label>Endereço</Form.Label>
-        <Form.Control
-          placeholder="Endereço"
-          value={enredeco}
-          onChange={(event) => setEnredeco(event.target.value)}
-        />
-      </Form.Group>
+        <Form.Group as={Col} controlId="formGridEndereco">
+          <Form.Label>Endereço</Form.Label>
+          <Form.Control
+            placeholder="Endereço"
+            value={enredeco}
+            onChange={(event) => setEnredeco(event.target.value)}
+          />
+        </Form.Group>
 
-      <Form.Group as={Col} controlId="formGridComplemento">
-        <Form.Label>Complemento</Form.Label>
-        <Form.Control
-          placeholder="Complemento"
-          value={complemento}
-          onChange={(event) => setComplemento(event.target.value)}
-        />
-      </Form.Group>
+        <Form.Group as={Col} controlId="formGridComplemento">
+          <Form.Label>Complemento</Form.Label>
+          <Form.Control
+            placeholder="Complemento"
+            value={complemento}
+            onChange={(event) => setComplemento(event.target.value)}
+          />
+        </Form.Group>
 
-      <Form.Group as={Col} controlId="formGridBairro">
-        <Form.Label>Bairro</Form.Label>
-        <Form.Control
-          placeholder="Bairro"
-          value={bairro}
-          onChange={(event) => setBairro(event.target.value)}
-        />
-      </Form.Group>
+        <Form.Group as={Col} controlId="formGridBairro">
+          <Form.Label>Bairro</Form.Label>
+          <Form.Control
+            placeholder="Bairro"
+            value={bairro}
+            onChange={(event) => setBairro(event.target.value)}
+          />
+        </Form.Group>
       </Row>
 
       <Row className="mb-3">
@@ -153,10 +160,30 @@ function GridComplexExample() {
         </Form.Group>
       </Row>
 
-      <div class="mb-3">
-  <label for="formFile" class="form-label">Imagem</label>
-  <input class="form-control" type="file" id="formFile" />
-</div>
+      <Form.Group as={Col} controlId="formdesc">
+        <Form.Label>Descrição</Form.Label>
+        <Form.Control  placeholder="Descrição"
+        as="textarea"
+        rows={3}
+            value={descricao}
+            onChange={(event) => setDescricao(event.target.value)} />
+      </Form.Group>
+
+      <Form.Group as={Col} controlId="formSite">
+          <Form.Label>Site</Form.Label>
+          <Form.Control
+            placeholder="Site"
+            value={site}
+            onChange={(event) => setSite(event.target.value)}
+          />
+        </Form.Group>
+
+      <Form.Group class="mb-3">
+        <Form.Label for="formFile" class="form-label">
+          Imagem
+        </Form.Label>
+        <Form.Control class="form-control" type="file" id="formFile" />
+      </Form.Group>
 
       <Button variant="primary" type="submit">
         Submit

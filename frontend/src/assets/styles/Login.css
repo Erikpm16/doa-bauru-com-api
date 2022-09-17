@@ -21,7 +21,7 @@ main{
     border-radius: 20px;
     /* width: clamp(70%, 70%, 60%); */
     box-shadow: 10px 15px 5px rgba(0, 0, 0, 2);
-    background-color: aquamarine;
+    background-color:#87CEEB;
     display: flex;
     flex-direction: column;
     align-items: center;
