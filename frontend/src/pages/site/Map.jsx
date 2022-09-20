@@ -17,6 +17,7 @@ export default function Map() {
 
 function Mapa() {
   return (
+
     <GoogleMap
       zoom={10}
       center={{ lat: -22.3206508, lng: -49.0681451 }}

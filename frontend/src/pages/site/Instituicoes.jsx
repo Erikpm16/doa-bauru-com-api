@@ -39,7 +39,7 @@ export default function Instituicoes() {
                 <td>{item.name}</td>
                 <td>{item.desc}</td>
                 <td>
-                  <NavLink link={data.site}>Site</NavLink>
+                <a onClick={() => window.open(item.site)} href='javascript:void(0);'>Site</a>
                 </td>
               </tr>
             ))}

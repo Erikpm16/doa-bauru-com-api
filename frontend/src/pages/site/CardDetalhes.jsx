@@ -35,7 +35,6 @@ export default function CardDetalhes() {
                 <h1>{instituicao.name}</h1>
                 <Button>Contato</Button>
             </div>
-            <h3 className='descrição'>{instituicao.desc}</h3>
         </Container>
     )
 }
