@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useEffect } from 'react';
 import { Breadcrumb, Button, Col, Container, Row } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form';
@@ -6,18 +6,26 @@ import Modal from 'react-bootstrap/Modal';
 import { Link, useParams } from 'react-router-dom'
 import '../../assets/styles/CardDetalhes.css'
 import Footer from './components/Footer'
+import { Context } from "./context/OngsContext";
 
 export default function CardDetalhes() {
-    const params = useParams();
-    const [instituicao, setTnstituicao] = useState();
+    const { id } = useParams();
+    const { get } = useContext(Context);
+    const [instituicao, setInstituicao] = useState();
     const [modalShow, setModalShow] = React.useState(false);
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        fetch('http://localhost:3000/static/ong.json')
-            .then((response) => response.json())
-            .then(setTnstituicao);
-    }, [params]);
+    //     fetch(`http://localhost:2000/clients/${id}`)
+    //         .then((response) => response.json())
+    //         .then(setTnstituicao);
+    // }, [id]);
+
+
+    // useEffect(() => {
+    //   get(id).then((json) => setInstituicao(json));
+    // }, [id]);
+  
 
     function MyVerticallyCenteredModal(props) {
         return (

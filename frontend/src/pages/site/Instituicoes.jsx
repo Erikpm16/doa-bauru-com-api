@@ -10,7 +10,7 @@ export default function Instituicoes() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/static/ongs.json")
+    fetch("http://localhost:2000/clients")
       .then((response) => response.json())
       .then(setData);
   }, []);
@@ -37,7 +37,7 @@ export default function Instituicoes() {
                   <img src={item.image} width={100} />
                 </td>
                 <td>{item.name}</td>
-                <td>{item.desc}</td>
+                <td>{item.description}</td>
                 <td>
                 <a onClick={() => window.open(item.site)} href='javascript:void(0);'>Site</a>
                 </td>
