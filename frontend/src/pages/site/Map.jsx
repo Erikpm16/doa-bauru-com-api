@@ -1,29 +1,25 @@
-import React, { useMemo } from "react";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
-import "../../assets/styles/Mapa.css"
+import React, { useEffect, useState, useRef } from 'react'
+import * as tt from '@tomtom-international/web-sdk-maps'
 
-export default function Map() {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-  });
+const Map = () => {
+    const mapElement = useRef()
+    const [map, setMap] = useState()
 
-  if (!isLoaded) return <div>Loading...</div>;
-  return (
-    <div>
-      <Mapa />
-    </div>
-  );
+    useEffect(() => {
+        let m = tt.map({
+            key: process.env.REACT_APP_TOM_TOM_API_KEY,
+            container: mapElement.current,
+        })
+
+        console.log("MAP");
+        setMap(m)
+
+    }, []);
+
+    return (
+        <div ref={mapElement} className="map"></div>
+    )
 }
 
-function Mapa() {
-  return (
 
-    <GoogleMap
-      zoom={10}
-      center={{ lat: -22.3206508, lng: -49.0681451 }}
-      mapContainerClassName="map-container"
-    >
-      <Marker position={{ lat: -22.3206508, lng: -49.0681451 }} />
-    </GoogleMap>
-  );
-}
+export default Map
