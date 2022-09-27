@@ -9,25 +9,19 @@ import Footer from './components/Footer'
 import { Context } from "./context/OngsContext";
 
 export default function CardDetalhes() {
-    const { id } = useParams();
-    const { get } = useContext(Context);
+    const params = useParams();
     const [instituicao, setInstituicao] = useState();
     const [modalShow, setModalShow] = React.useState(false);
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     fetch(`http://localhost:2000/clients/${id}`)
-    //         .then((response) => response.json())
-    //         .then(setTnstituicao);
-    // }, [id]);
+      fetch(`http://localhost:2000/clients/${params.id}`)
+          .then((response) => response.json())
+          .then(setInstituicao);
 
+  }, [params]);
 
-    // useEffect(() => {
-    //   get(id).then((json) => setInstituicao(json));
-    // }, [id]);
-  
-
-    function MyVerticallyCenteredModal(props) {
+    function ModalCompartilhamento(props) {
         return (
           <Modal
             {...props}
@@ -75,7 +69,7 @@ export default function CardDetalhes() {
 
     <Row>
         <Col xs={12} md={8}>
-            <img className='imagem' src={instituicao.image} />
+            <img className='img-fluid' src={instituicao.image} />
         </Col>
         <Col xs={6} md={4}>
         <h2>{instituicao.name}</h2>
@@ -95,7 +89,7 @@ export default function CardDetalhes() {
         <Col xs={6}><Button>Contato</Button></Col>
         <Col xs={6}><Button variant="primary" onClick={() => setModalShow(true)}>Compartilhe</Button>
         </Col>
-        <MyVerticallyCenteredModal
+        <ModalCompartilhamento
         show={modalShow}
         onHide={() => setModalShow(false)}
       />

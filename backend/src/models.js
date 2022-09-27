@@ -62,6 +62,13 @@ const Client = database.define('client', {
             notEmpty: true,
         }
     },
+    number: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        }
+    },
     district: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -93,6 +100,20 @@ const Client = database.define('client', {
     description: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+            notEmpty: true,
+        }
+    },
+    lat: {
+        type: DataTypes.DECIMAL(10, 7),
+        allowNull: true,
+        validate: {
+            notEmpty: true,
+        }
+    },
+    lon: {
+        type: DataTypes.DECIMAL(10, 7),
+        allowNull: true,
         validate: {
             notEmpty: true,
         }
