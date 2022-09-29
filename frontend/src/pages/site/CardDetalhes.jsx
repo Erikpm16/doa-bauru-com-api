@@ -82,7 +82,7 @@ export default function CardDetalhes() {
       <Row>
         <Col xs={12} md={5}>
         <br/>
-          <b><h2>{instituicao.desc}</h2></b>
+          <b><h3>{instituicao.description}</h3></b>
         </Col>
       </Row>
       <Row>

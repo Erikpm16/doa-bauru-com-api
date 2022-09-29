@@ -6,8 +6,8 @@ function Navibar() {
       <Container>
       <Navbar.Brand href="/">
             <img
-              src="https://react-bootstrap.github.io/logo.svg"
-              width="30"
+              src="https://github.com/Erikpm16/doa-bauru-com-api/blob/erik-branch/frontend/public/img/Logo%20Cora%C3%A7%C3%A3o.png?raw=true"
+              width="70"
               height="30"
               className="d-inline-block align-top"
             />
