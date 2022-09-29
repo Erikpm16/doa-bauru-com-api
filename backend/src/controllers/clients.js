@@ -1,4 +1,5 @@
 const { Client } = require("../models");
+const axios = require('axios');
 
 const multer = require('multer')
 const path = require('path')
@@ -30,8 +31,12 @@ async function getOneClient(req, res, next) {
 async function insertClient(req, res, next) { 
     try {
 
-        const {zipcode, number} = req.body;
-        const data = await (await fetch(`https://api.tomtom.com/search/2/structuredGeocode.json?key=Uj1w4Ss6KVGHqRAKOo27KaCG7IAK1XCe&countryCode=BR&postalCode=${zipcode}&streetNumber=${number}`)).json();
+        let {zipcode, number} = req.body;
+
+        number = number.replace(' ', '').replace('-', '00')
+
+       const {data} = await axios.get(`https://api.tomtom.com/search/2/structuredGeocode.json?key=Uj1w4Ss6KVGHqRAKOo27KaCG7IAK1XCe&countryCode=BR&postalCode=${zipcode}&streetNumber=${number}`)
+
         const client = await Client.create({ ...req.body, ...data.results[0].position});
         res.send(client);
     } catch (err) {

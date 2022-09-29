@@ -1,6 +1,8 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom/client';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@tomtom-international/web-sdk-maps/dist/maps.css'
 
 import App from './App';
 
