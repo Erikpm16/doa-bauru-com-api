@@ -17,6 +17,8 @@ function GridComplexExample() {
   const [cep, setCep] = useState();
   const [bairro, setBairro] = useState();
   const [complemento, setComplemento] = useState();
+  const [description, setDescricao] = useState();
+  const [telephone, setTelephone] = useState();
 
   const submit = (event) => {
     event.preventDefault();
@@ -103,12 +105,30 @@ function GridComplexExample() {
           />
         </Form.Group>
 
+        <Form.Group as={Col} controlId="formGridDescricao">
+          <Form.Label>Descrição</Form.Label>
+          <Form.Control
+            placeholder="Descrição"
+            value={description}
+            onChange={(event) => setDescricao(event.target.value)}
+          />
+        </Form.Group>
+
         <Form.Group as={Col} controlId="formGridZip">
           <Form.Label>CEP</Form.Label>
           <Form.Control
             placeholder="CEP"
             value={cep}
             onChange={(event) => setCep(event.target.value)}
+          />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridZip">
+          <Form.Label>Telefone</Form.Label>
+          <Form.Control
+            placeholder="Telefone"
+            value={telephone}
+            onChange={(event) => setTelephone(event.target.value)}
           />
         </Form.Group>
       </Row>
