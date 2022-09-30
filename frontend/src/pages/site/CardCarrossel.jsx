@@ -10,7 +10,7 @@ import '../../assets/styles/CardCarrosel.css'
         const carrousel = useRef(null);
 
     useEffect(() => {
-        fetch('http://localhost:3000/static/ongs.json')
+        fetch('http://localhost:2000/clients')
             .then((response) => response.json())
             .then(setData);
     }, [])

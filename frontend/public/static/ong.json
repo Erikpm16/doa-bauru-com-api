@@ -1,6 +1,17 @@
+
+
 {
-    "id": "1",
-    "name": "Sec. do Bem-Estar Social",
-    "image": "https://www.aguanil.mg.gov.br/fotos/91c486d96c439c66d82b9868853e4dd0.jpg",
-    "desc": "lorem testelorem testelorem testelorem testelorem testelorem testelorem testelorem testelorem testelorem testelorem teste"
+    "id": "3",
+    "name": "APAE Bauru",
+    "image": "https://loja.apaebauru.org.br/image/cache/catalog/LOJA_VIRTUAL/logoapae-600x315.png",
+    "description": "Associação de caráter beneficente de assistência social que presta atendimento e assessoramento a pessoa com deficiência, bem como a defesa de direitos articulada com políticas nas áreas de Assistência Social, Educação e Saúde. A APAE Bauru atende atualmente quatro mil pessoas com deficiência intelectual, física, visual, transtorno do espectro autista, necessidades educacionais especiais, bebês de risco e pessoas em situação de vulnerabilidade social.",
+     "site": "https://www.apaebauru.org.br/",
+     "email": "contato@apaedebauru.org.br",
+     "password": "102030",
+     "telephone": " 1431042834",
+     "address": "Av. José Henrique Ferraz",
+     "number": "20-20",
+     "district": "Bauru",
+     "state": "SP",
+     "zipcode": "17054697"
 }

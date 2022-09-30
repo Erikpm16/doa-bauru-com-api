@@ -1,10 +1,9 @@
-*{
+/* *{
     margin: 0%;
     
-}
-.principal_img{
-    width: 100%;
-    
+} */
+.img_principal{
+    margin: -16px;
 }
 
 .inicio{
@@ -12,4 +11,22 @@
     background-color:aquamarine;
     border: solid white 0.5px;
     border-radius: 10px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{
+    color: green;
+}
+.tabela-inst{
+    margin-bottom: 30px;
+}
+
+.titulo{
+    font-size: 40px;
+    font-weight: bold   ;
+    padding: 50px
 }

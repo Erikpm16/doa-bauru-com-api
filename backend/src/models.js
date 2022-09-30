@@ -48,14 +48,20 @@ const Client = database.define('client', {
     },
     password: DataTypes.STRING(100),
     telephone: {
-        type: DataTypes.SMALLINT,       
+        type: DataTypes.STRING(18),       
         allowNull: false,
         validate: {
             notEmpty: true,
-            isInt: true,
         }
     },
     address: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        }
+    },
+    number: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -95,6 +101,27 @@ const Client = database.define('client', {
         allowNull: false,
         validate: {
             notEmpty: true,
+        }
+    },
+    lat: {
+        type: DataTypes.DECIMAL(10, 7),
+        allowNull: true,
+        validate: {
+            notEmpty: true,
+        }
+    },
+    lon: {
+        type: DataTypes.DECIMAL(10, 7),
+        allowNull: true,
+        validate: {
+            notEmpty: true,
+        }
+    },
+    site: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        validate: {
+            notEmpty: false,
         }
     },
 });

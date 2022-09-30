@@ -17,18 +17,11 @@ function GridComplexExample() {
   const [cep, setCep] = useState();
   const [bairro, setBairro] = useState();
   const [complemento, setComplemento] = useState();
+  const [description, setDescricao] = useState();
+  const [telephone, setTelephone] = useState();
 
   const submit = (event) => {
     event.preventDefault();
-    // create({
-    //   email,
-    //   nome,
-    //   password,
-    //   enredeco,
-    //   cidade,
-    //   estado,
-    //   cep,
-    // });
   };
 
   return (
@@ -110,37 +103,15 @@ function GridComplexExample() {
             value={estado}
             onChange={(event) => setEstado(event.target.value)}
           />
-          {/* <Form.Select defaultValue="Estado">
-                        <option>Estados</option>
-                        <option>Acre (AC)</option>
-                        <option>Alagoas (AL)</option>
-                        <option>Amapá (AP)</option>
-                        <option>Amazonas (AM)</option>
-                        <option>Bahia (BA)</option>
-                        <option>Ceará (CE)</option>
-                        <option>Distrito Federal (DF</option>)
-                        <option>Espírito Santo (ES</option>)
-                        <option>Goiás (GO)</option>
-                        <option>Maranhão (MA)</option>
-                        <option>Mato Grosso (MT</option>)
-                        <option>Mato Grosso do</option> Sul (MS)
-                        <option>Minas Gerais (MG</option>)
-                        <option>Pará (PA)</option>
-                        <option>Paraíba (PB)</option>
-                        <option>Paraná (PR)</option>
-                        <option>Pernambuco (PE)</option>
-                        <option>Piauí (PI)</option>
-                        <option>Rio de Janeiro</option> (RJ)
-                        <option>Rio Grande do</option> Norte (RN)
-                        <option>Rio Grande do</option> Sul (RS)
-                        <option>Rondônia (RO)</option>
-                        <option>Roraima (RR)</option>
-                        <option>Santa Catarina (SC</option>)
-                        <option>São Paulo (SP</option>)
-                        <option>Sergipe (SE)</option>
-                        <option>Tocantins (TO)</option>
-                        <option>...</option>
-                    </Form.Select> */}
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridDescricao">
+          <Form.Label>Descrição</Form.Label>
+          <Form.Control
+            placeholder="Descrição"
+            value={description}
+            onChange={(event) => setDescricao(event.target.value)}
+          />
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridZip">
@@ -149,6 +120,15 @@ function GridComplexExample() {
             placeholder="CEP"
             value={cep}
             onChange={(event) => setCep(event.target.value)}
+          />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridZip">
+          <Form.Label>Telefone</Form.Label>
+          <Form.Control
+            placeholder="Telefone"
+            value={telephone}
+            onChange={(event) => setTelephone(event.target.value)}
           />
         </Form.Group>
       </Row>

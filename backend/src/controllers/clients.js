@@ -1,4 +1,5 @@
 const { Client } = require("../models");
+const axios = require('axios');
 
 const multer = require('multer')
 const path = require('path')
@@ -20,7 +21,7 @@ async function getOneClient(req, res, next) {
                 id: req.params.id
             }
         });
-        if (!client) throw new Error("Filme não existe");
+        if (!client) throw new Error("Usuario não existe");
         res.send(client);
     }
     catch (err) {
@@ -29,7 +30,14 @@ async function getOneClient(req, res, next) {
 }
 async function insertClient(req, res, next) { 
     try {
-        const client = await Client.create(req.body);
+
+        let {zipcode, number} = req.body;
+
+        number = number.replace(' ', '').replace('-', '00')
+
+       const {data} = await axios.get(`https://api.tomtom.com/search/2/structuredGeocode.json?key=Uj1w4Ss6KVGHqRAKOo27KaCG7IAK1XCe&countryCode=BR&postalCode=${zipcode}&streetNumber=${number}`)
+
+        const client = await Client.create({ ...req.body, ...data.results[0].position});
         res.send(client);
     } catch (err) {
         next(err);
@@ -45,7 +53,10 @@ async function updateClient(req, res, next) {
         
         if (!client) throw new Error("Cadastro não existe");
 
-        client.set(req.body);
+        const {zipcode, number} = req.body;
+        const data = await (await fetch(`https://api.tomtom.com/search/2/structuredGeocode.json?key=Uj1w4Ss6KVGHqRAKOo27KaCG7IAK1XCe&countryCode=BR&postalCode=${zipcode}&streetNumber=${number}`)).json();
+
+        client.set({ ...req.body, ...data.results[0].position});
 
         await client.save();
 
@@ -63,7 +74,7 @@ async function deleteClient(req, res, next) {
             }
         });
 
-        if (!client) throw new Error("Filme não existe");
+        if (!client) throw new Error("Usuario não existe");
 
         await client.destroy();
 
