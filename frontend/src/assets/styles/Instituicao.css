@@ -1,7 +1,11 @@
-*{
+/* *{
     margin: 0%;
     
+<<<<<<< HEAD
 }
+=======
+} */
+>>>>>>> 263b9da0413d413ac00916b8fe825489b6749bc8
 .img_principal{
     margin: -16px;
 }

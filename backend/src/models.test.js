@@ -15,6 +15,10 @@ describe("models", () =>{
         expect(user).toBeDefined();
         expect(user.id).toBeDefined();
         expect(user.name).toBe("Celio");
+
+
+ await expect(News.create({})).rejects.toThrow();
+
     })
 });
 
