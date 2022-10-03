@@ -1,11 +1,12 @@
 import React from 'react'
-import { useContext } from 'react'
+import { useState } from 'react';
 
-export const Context = React.creacteContext()
+
+export const Context = React.createContext();
 
 export default function AdminUserContext({children}) {
-    const [ user, setUser ] = useContext(null);
-    const [ islogged, setIslogged] = useContext(false);
+    const [ user, setUser ] = useState(null);
+    const [ islogged, setIslogged] = useState(false);
 
     const login = (email, password) => {
         setUser({

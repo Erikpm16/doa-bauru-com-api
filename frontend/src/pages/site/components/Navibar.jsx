@@ -1,4 +1,5 @@
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Navibar() {
   return (
@@ -12,15 +13,15 @@ function Navibar() {
               className="d-inline-block align-top"
             />
           </Navbar.Brand>
-        <Navbar.Brand href="/">DOA Bauru</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">DOA Bauru</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/mapa">Mapa</Nav.Link>
-            <Nav.Link href="/quemsomos">Quem somos</Nav.Link>
-            <Nav.Link href="/instituicoes">Instituicoes</Nav.Link>
-            <Nav.Link href="/login" className="Login-nav">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/mapa">Mapa</Nav.Link>
+            <Nav.Link as={Link} to="/quemsomos">Quem somos</Nav.Link>
+            <Nav.Link as={Link} to="/instituicoes">Instituicoes</Nav.Link>
+            <Nav.Link as={Link} to="/login" className="Login-nav">
               Login
             </Nav.Link>
           </Nav>

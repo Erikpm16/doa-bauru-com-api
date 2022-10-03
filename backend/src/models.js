@@ -75,6 +75,13 @@ const Client = database.define('client', {
             notEmpty: true,
         }
     },
+    city: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        }
+    },
     state: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -97,6 +104,13 @@ const Client = database.define('client', {
         }
     },
     description: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        }
+    },
+    complement: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
