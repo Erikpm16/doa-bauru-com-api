@@ -37,7 +37,7 @@ async function insertClient(req, res, next) {
 
        const {data} = await axios.get(`https://api.tomtom.com/search/2/structuredGeocode.json?key=Uj1w4Ss6KVGHqRAKOo27KaCG7IAK1XCe&countryCode=BR&postalCode=${zipcode}&streetNumber=${number}`)
 
-        const client = await Client.create({ ...req.body, ...data.results[0].position});
+        const client = await Client.create({ ...req.body, ...data.results[0]?.position});
         res.send(client);
     } catch (err) {
         next(err);

@@ -62,10 +62,11 @@ const Client = database.define('client', {
         }
     },
     number: {
-        type: DataTypes.STRING,
+        type: DataTypes.SMALLINT,       
         allowNull: false,
         validate: {
             notEmpty: true,
+            isInt: true,
         }
     },
     district: {
