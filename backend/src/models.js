@@ -90,18 +90,26 @@ const Client = database.define('client', {
             notEmpty: true,
         }
     },
+    city: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        }
+    },
+    complement: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        }
+    },
     zipcode: {
         type: DataTypes.SMALLINT,       
         allowNull: false,
         validate: {
             notEmpty: true,
             isInt: true,
-        }
-    },
-    image: {
-        type: DataTypes.STRING,
-        validate: {
-            notEmpty: true,
         }
     },
     description: {

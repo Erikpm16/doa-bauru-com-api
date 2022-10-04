@@ -1,7 +1,7 @@
-import React from 'react'
-import Navibar from './components/Navibar'
+import React from "react";
+import Navibar from "./components/Navibar";
 import { Outlet } from "react-router-dom";
-import OngsContext from './context/OngsContext';
+import OngsContext from "./context/OngsContext";
 
 export default function HomePage() {
   return (
@@ -9,7 +9,7 @@ export default function HomePage() {
       <OngsContext>
         <Navibar />
         <Outlet />
-        </OngsContext>
+      </OngsContext>
     </div>
-  )
+  );
 }

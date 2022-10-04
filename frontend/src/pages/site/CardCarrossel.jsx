@@ -1,26 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useContext } from 'react';
 import { useEffect, useRef } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/CardCarrosel.css'
-import { Context } from './context/OngsContext';
+// import { Context } from './context/OngsContext';
 
 
     function CardCarrossel() {
-        // const [data, setData] = useState([]);
+        const [data, setData] = useState([]);
         const carrousel = useRef(null);
-        const { list, ongs } = useContext(Context);
-
-    // useEffect(() => {
-    //     fetch('http://localhost:2000/clients')
-    //         .then((response) => response.json())
-    //         .then(setData);
-    // }, [])
+        // const { list, ongs } = useContext(Context);
 
     useEffect(() => {
-        list();
-    }, []);
+        fetch('http://localhost:2000/clients')
+            .then((response) => response.json())
+            .then(setData);
+    }, [])
+
+    // useEffect(() => {
+    //     list();
+    // }, []);
 
    const handleLeftClick = (e) => {
  
@@ -32,12 +32,12 @@ import { Context } from './context/OngsContext';
     carrousel.current.scrollLeft += carrousel.current.offsetWidth;
     }
 
-    if (!ongs || !ongs.length) return null;
+    if (!data || !data.length) return null;
 
     return(
         <div className="container">
             <div className="carrousel" ref={carrousel}>
-                {ongs.map((item) => {
+                {data.map((item) => {
                     const {id, name, image} = item;
                 return (
                     <div className="item" key={id}>
