@@ -78,29 +78,21 @@ export default function CardDetalhes() {
         </Col>
         <Col xs={6} md={4}>
         <h2>{instituicao.name}</h2>
-        <h4>Sub-titulo aqui</h4>
+
         <Button size="lg" onClick={() => window.open(instituicao.site)} href='javascript:void(0);'>Contato</Button>{' '}
-        <Button size="lg" variant="primary" onClick={() => setModalShow(true)}>Compartilhe</Button>
+        
         </Col>
       </Row>
 
       <Row>
-        <Col xs={12} md={5}>
+        <Col xs={10} md={12}>
         <br/>
-          <b><h3>{instituicao.description}</h3></b>
+          <b><h4>{instituicao.description}</h4></b>
+
         </Col>
       </Row>
-      <Row>
-        <Col xs={6}><Button>Contato</Button></Col>
-        <Col xs={6}><Button variant="primary" onClick={() => setModalShow(true)}>Compartilhe</Button>
-        </Col>
-        <ModalCompartilhamento
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-    </Row>
       </Container>
-      <br/>
+      <br/><br/><br/><br/><br/><br/>
       <Footer/>
 </>
     )
