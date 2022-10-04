@@ -33,11 +33,16 @@ async function insertClient(req, res, next) {
 
         let {zipcode, number} = req.body;
 
-        number = number.replace(' ', '').replace('-', '00')
+        let position = {};
 
-       const {data} = await axios.get(`https://api.tomtom.com/search/2/structuredGeocode.json?key=Uj1w4Ss6KVGHqRAKOo27KaCG7IAK1XCe&countryCode=BR&postalCode=${zipcode}&streetNumber=${number}`)
+        if (number && zipcode) {
+            number = number.replace(' ', '').replace('-', '00')
+           const {data} = await axios.get(`https://api.tomtom.com/search/2/structuredGeocode.json?key=Uj1w4Ss6KVGHqRAKOo27KaCG7IAK1XCe&countryCode=BR&postalCode=${zipcode}&streetNumber=${number}`)
+           if (data.results[0])
+           position = data.results[0].position || {};
+        }
 
-        const client = await Client.create({ ...req.body, ...data.results[0].position});
+        const client = await Client.create({ ...req.body, ...position});
         res.send(client);
     } catch (err) {
         next(err);

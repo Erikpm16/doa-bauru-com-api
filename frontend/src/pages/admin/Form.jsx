@@ -22,12 +22,14 @@ function GridComplexExample() {
   const [district, setDistrict] = useState();
   const [complement, setComplement] = useState();
   const [description, setDescription] = useState();
-  const [site, setSite] = useState();
-  const [image, setImage] = useState();
   const [telephone, setTelephone] = useState();
+  const [image, setImage] = useState();
+  const [site, setSite] = useState();
+  const [number, setNumber] = useState();
 
   const submit = (event) => {
     event.preventDefault();
+
     create({
       email,
       name,
@@ -39,10 +41,12 @@ function GridComplexExample() {
       district,
       complement,
       description,
-      site,
+      telephone,
       image,
-      telephone
+      site,
+      number,
     });
+
   };
 
   return (
@@ -68,43 +72,52 @@ function GridComplexExample() {
           />
         </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Nome</Form.Label>
-          <Form.Control
-            placeholder="Nome"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-          />
-        </Form.Group>
+        <Form.Group as={Col} controlId="formGridName">
+            <Form.Label>Nome Completo</Form.Label>
+            <Form.Control
+              placeholder="Nome Completo"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+            />
+          </Form.Group>
       </Row>
 
       <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridEndereco">
-          <Form.Label>Endereço</Form.Label>
-          <Form.Control
-            placeholder="Endereço"
-            value={address}
-            onChange={(event) => setAddress(event.target.value)}
-          />
-        </Form.Group>
+      <Form.Group as={Col} controlId="formGridAddress">
+        <Form.Label>Endereço</Form.Label>
+        <Form.Control
+          placeholder="Endereço"
+          value={address}
+          onChange={(event) => setAddress(event.target.value)}
+        />
+      </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridComplemento">
-          <Form.Label>Complemento</Form.Label>
-          <Form.Control
-            placeholder="Complemento"
-            value={complement}
-            onChange={(event) => setComplement(event.target.value)}
-          />
-        </Form.Group>
+      <Form.Group as={Col} controlId="formGridNumber">
+        <Form.Label>Numero</Form.Label>
+        <Form.Control
+          placeholder="Numero"
+          value={number}
+          onChange={(event) => setNumber(event.target.value)}
+        />
+      </Form.Group>
 
-        <Form.Group as={Col} controlId="formGridBairro">
-          <Form.Label>Bairro</Form.Label>
-          <Form.Control
-            placeholder="Bairro"
-            value={district}
-            onChange={(event) => setDistrict(event.target.value)}
-          />
-        </Form.Group>
+      <Form.Group as={Col} controlId="formGridComplement">
+        <Form.Label>Complemento</Form.Label>
+        <Form.Control
+          placeholder="Complemento"
+          value={complement}
+          onChange={(event) => setComplement(event.target.value)}
+        />
+      </Form.Group>
+
+      <Form.Group as={Col} controlId="formGridDistrict">
+        <Form.Label>Bairro</Form.Label>
+        <Form.Control
+          placeholder="Bairro"
+          value={district}
+          onChange={(event) => setDistrict(event.target.value)}
+        />
+      </Form.Group>
       </Row>
 
       <Row className="mb-3">
@@ -154,21 +167,27 @@ function GridComplexExample() {
         </Form.Group>
       </Row>
 
-      <Form.Group as={Col} controlId="formSite">
-        <Form.Label>Site</Form.Label>
-        <Form.Control
-          placeholder="Site"
-          value={site}
-          onChange={(event) => setSite(event.target.value)}
-        />
-      </Form.Group>
+    <Row className="mb-2">
 
-      <Form.Group class="mb-3">
-        <Form.Label for="formFile" class="form-label">
-          Imagem
-        </Form.Label>
-        <Form.Control class="form-control" type="file" id="formFile" />
-      </Form.Group>
+      <Form.Group as={Col} controlId="formGridImage">
+          <Form.Label>Imagem</Form.Label>
+          <Form.Control
+            placeholder="URL - Imagem"
+            value={image}
+            onChange={(event) => setImage(event.target.value)}
+          />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridSite">
+          <Form.Label>Site</Form.Label>
+          <Form.Control
+            placeholder="URL - Site"
+            value={site}
+            onChange={(event) => setSite(event.target.value)}
+          />
+        </Form.Group>
+
+        </Row>
 
       <Button variant="primary" type="submit">
         Submit
