@@ -118,19 +118,13 @@ const Client = database.define('client', {
             notEmpty: true,
         }
     },
-<<<<<<< HEAD
-    site: {
-=======
     complement: {
->>>>>>> 263b9da0413d413ac00916b8fe825489b6749bc8
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
             notEmpty: true,
         }
     },
-<<<<<<< HEAD
-=======
     lat: {
         type: DataTypes.DECIMAL(10, 7),
         allowNull: true,
@@ -152,7 +146,6 @@ const Client = database.define('client', {
             notEmpty: false,
         }
     },
->>>>>>> 263b9da0413d413ac00916b8fe825489b6749bc8
 });
 
 module.exports = { database, User, Client };
