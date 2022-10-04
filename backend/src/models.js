@@ -90,7 +90,7 @@ const Client = database.define('client', {
             notEmpty: true,
         }
     },
-    city: {
+    image: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
