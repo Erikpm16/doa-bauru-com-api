@@ -17,19 +17,11 @@ function Navibar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-<<<<<<< HEAD
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/mapa">Mapa</Nav.Link>
-            <Nav.Link href="/quemsomos">Quem somos</Nav.Link>
-            <Nav.Link href="/instituicoes">Instituicoes</Nav.Link>
-            <Nav.Link href="/login" className="Login-nav">
-=======
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/mapa">Mapa</Nav.Link>
             <Nav.Link as={Link} to="/quemsomos">Quem somos</Nav.Link>
             <Nav.Link as={Link} to="/instituicoes">Instituicoes</Nav.Link>
             <Nav.Link as={Link} to="/login" className="Login-nav">
->>>>>>> 263b9da0413d413ac00916b8fe825489b6749bc8
               Login
             </Nav.Link>
           </Nav>

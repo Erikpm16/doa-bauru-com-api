@@ -10,11 +10,7 @@ export default function Instituicoes() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-<<<<<<< HEAD
-    fetch("http://localhost:2000/")
-=======
     fetch("http://localhost:2000/clients")
->>>>>>> 263b9da0413d413ac00916b8fe825489b6749bc8
       .then((response) => response.json())
       .then(setData);
   }, []);
@@ -43,11 +39,7 @@ export default function Instituicoes() {
                 <td>{item.name}</td>
                 <td>{item.description}</td>
                 <td>
-<<<<<<< HEAD
-                  <NavLink href={item.site}>Site</NavLink>
-=======
                 <a onClick={() => window.open(item.site)} href='javascript:void(0);'>Site</a>
->>>>>>> 263b9da0413d413ac00916b8fe825489b6749bc8
                 </td>
               </tr>
             ))}
