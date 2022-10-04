@@ -7,13 +7,15 @@ function Carouseltela() {
   const [doar] = useState([
     {
       id: 0,
-      name: "Entrega de Refeições",
+      name: "Fundo Social de Solidariedade",
       photo: Food,
+      URL: "https://www2.bauru.sp.gov.br/gabinete/fundosocialsolidariedade/",
     },
     {
       id: 2,
-      name: "Entrega de Roupas em Geral",
+      name: "Campanha do agasalho",
       photo: Clothes,
+      URL: "https://www2.bauru.sp.gov.br/materia.aspx?n=40892",
     },
   ]);
 
@@ -25,7 +27,7 @@ function Carouseltela() {
             <Carousel.Item>
               <Image src={image.photo} fluid={true} />
               <div className="carousel-caption d-none d-md-block">
-                <Button href="/instituicoes">{image.name}</Button>
+                <Button href={image.URL}>{image.name}</Button>
               </div>
             </Carousel.Item>
           ))}

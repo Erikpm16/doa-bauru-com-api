@@ -1,18 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
+import { useContext } from "react";
 import { useEffect } from "react";
-import { Container, NavLink, Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, Table } from "react-bootstrap";
 import insti_img from "../../assets/img/instituicoes.png";
-import principal_img from "../../assets/styles/Instituicao.css";
 import Footer from "./components/Footer";
+import { Context } from "./context/OngsContext";
 
 export default function Instituicoes() {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
+  const { list, ongs } = useContext(Context);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:2000/clients")
+  //     .then((response) => response.json())
+  //     .then(setData);
+  // }, []);
 
   useEffect(() => {
-    fetch("http://localhost:2000/clients")
-      .then((response) => response.json())
-      .then(setData);
+    list();
   }, []);
 
   return (
@@ -30,7 +35,7 @@ export default function Instituicoes() {
             </tr>
           </thead>
           <tbody>
-            {data.map((item, id) => (
+            {ongs.map((item, id) => (
               <tr key={id}>
                 <td>{item.id}</td>
                 <td>

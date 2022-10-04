@@ -9,17 +9,22 @@ import Footer from './components/Footer'
 import { Context } from "./context/OngsContext";
 
 export default function CardDetalhes() {
-    const params = useParams();
+    const {id} = useParams();
     const [instituicao, setInstituicao] = useState();
     const [modalShow, setModalShow] = React.useState(false);
+    const { get } = useContext(Context);
 
-    useEffect(() => {
+  //   useEffect(() => {
 
-      fetch(`http://localhost:2000/clients/${params.id}`)
-          .then((response) => response.json())
-          .then(setInstituicao);
+  //     fetch(`http://localhost:2000/clients/${params.id}`)
+  //         .then((response) => response.json())
+  //         .then(setInstituicao);
 
-  }, [params]);
+  // }, [params]);
+
+  useEffect(() => {
+    get(id).then(json => setInstituicao(json))
+  }, []);
 
     function ModalCompartilhamento(props) {
         return (
