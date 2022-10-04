@@ -82,3 +82,9 @@
 .container .buttons button:first-child img {
     transform: rotate(180deg);
 }
+
+.containerdiv {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
